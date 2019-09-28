@@ -39,7 +39,7 @@
 				{{ $t('language') }}: <span class="select" :class="[{ selected: $i18n.locale == 'en' }]" @click="$i18n.locale='en'">EN</span> <span class="select" :class="[{ selected: $i18n.locale == 'ru' }]" @click="$i18n.locale='ru'">RU</span><br />
 				{{ $t('selectAsset') }}: <span class="select" :class="[{ selected: asset == 'waves' }]" @click="asset='waves'">WAVES</span> <span class="select" :class="[{ selected: asset == 'wct' }]" @click="asset='wct'">FORFUN</span><br />
 				{{ $t('round') }}: {{ round }}<br />
-				{{ $t('balance') }}: {{ wvsBalance }} WAVES + {{ wctBalance }} WCT<br />
+				{{ $t('balance') }}: {{ wvsBalance }} WAVES + {{ wctBalance }} FORFUN<br />
 				{{ $t('lastWin') }}:
 				<template v-if="round === 1">{{ $t('firstRound') }}</template>
 				<template v-else>{{ lastWin.cell }}<br />{{ lastWin.address }}</template>
