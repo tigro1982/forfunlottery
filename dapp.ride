@@ -28,7 +28,7 @@ func buy(cell: Int) = {
         let wvs = !pmt.assetId.isDefined()
         let wct = pmt.assetId == wctId
         if (!wct && !wvs || wct && pmt.amount != wctPrice || wvs && pmt.amount != wvsPrice) then {
-            throw("Price is 100 ForFun or 0.1 WAVES")
+            throw("Price is 100 ForFun or 0.2 WAVES")
         } else {
             # check if bought
             let cellData = this.getString(cell.toString())
