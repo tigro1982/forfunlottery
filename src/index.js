@@ -8,8 +8,8 @@ Vue.use(VueI18n)
 
 const messages = {
 	en: {
-		title: 'Welcome to the Waves Community Lottery',
-		shortDesc: 'Select one of 100 squares. Price: 1 WAVES or 1 WCT',
+		title: 'Welcome to the ForFun Community Lottery',
+		shortDesc: 'Select one of 100 squares. Price: 0.2 WAVES or 100 FORFUN',
 		description: `The winner will be determined when the last square is bought.<br/>
 		The number of the winning square is the remainder of the last block's signature number on division by 100.<br/>
 		(Number of winning square) = (Number of the last block's signature) % 100.<br/>
@@ -31,7 +31,7 @@ const messages = {
 	},
 	ru: {
 		title: 'Добро пожаловать в Waves Community Lottery',
-		shortDesc: 'Выберите один из 100 квадратов. Стоимость: 1 WAVES или 1 WCT',
+		shortDesc: 'Выберите один из 100 квадратов. Стоимость: 0.2 WAVES или 100 FORFUN',
 		description: `Победитель будет определен при покупке последнего квадрата.<br/>
 		Остаток от деления на 100 подписи последнего на этот момент блока блокчейна будет являться номером выигрышного квадрата.<br/>
 		(Номер выигрышного квадрата) = (подпись последнего блока) % 100<br/>
@@ -79,7 +79,7 @@ const main = new Vue({
 		asset: 'waves',
 		assets: {
 			waves: 'WAVES',
-			wct: 'DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J'
+			wct: '9XNexQ1GFmmN4EizQijZBqyTeAPgs2xQT7upPU3YQ7vm'
 		},
 		wvsBalance: 0,
 		wctBalance: 0,
@@ -173,7 +173,7 @@ const main = new Vue({
 			try {
 				const wctResponse = await axios.get(`${this.node}/assets/balance/${this.game}/${this.assets.wct}`)
 				const wvsResponse = await axios.get(`${this.node}/addresses/balance/${this.game}`)
-				this.wctBalance = wctResponse.data.balance / 100
+				this.wctBalance = wctResponse.data.balance / 100000000
 				this.wvsBalance = wvsResponse.data.balance / 100000000
 			} catch (e) {
 				console.log(e)
