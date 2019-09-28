@@ -1,5 +1,5 @@
 {
-  "name": "wclottery",
+  "name": "forfunlottery",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bodrych/wclottery.git"
+    "url": "git+https://github.com/tigro1982/forfunlottery.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bodrych/wclottery/issues"
+    "url": "https://github.com/tigro1982/forfunlottery/issues"
   },
-  "homepage": "https://github.com/bodrych/wclottery#readme",
+  "homepage": "https://github.com/tigro1982/forfunlottery#readme",
   "dependencies": {
     "@waves/waves-transactions": "^3.10.1",
     "axios": "^0.18.0",
