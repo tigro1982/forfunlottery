@@ -2,11 +2,11 @@
 {-# CONTENT_TYPE DAPP #-}
 {-# SCRIPT_TYPE ACCOUNT #-}
 
-let adminPublicKey = base58'5584brtd1tLqMNJdCzvPFUEL1ujYRyi4Sy3zEZ5nTPsJ'
-let wctId = base58'DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J'
+let adminPublicKey = base58'BZYYYg1h3K1TRfCmyUHuGh8qGE6RT7A5EaqrzgLSoUyb'
+let wctId = base58'9XNexQ1GFmmN4EizQijZBqyTeAPgs2xQT7upPU3YQ7vm'
 
-let wvsPrice = 100000000
-let wctPrice = 100
+let wvsPrice = 10000000
+let wctPrice = 10000000000
 let lastCell = 99
 
 let roundKey = "round"
@@ -28,7 +28,7 @@ func buy(cell: Int) = {
         let wvs = !pmt.assetId.isDefined()
         let wct = pmt.assetId == wctId
         if (!wct && !wvs || wct && pmt.amount != wctPrice || wvs && pmt.amount != wvsPrice) then {
-            throw("Price is 1 WCT or 1 WAVES")
+            throw("Price is 100 ForFun or 0.1 WAVES")
         } else {
             # check if bought
             let cellData = this.getString(cell.toString())
